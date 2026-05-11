@@ -1,0 +1,28 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.nwa.f35.bank_pitch": {
+      "loop": true,
+      "bones": {
+        "body": {
+          "rotation": ["query.target_x_rotation", 0, "-query.target_y_rotation * 0.25"]
+        },
+        "left_wing": {
+          "rotation": [0, 0, "-query.target_y_rotation * 0.35"]
+        },
+        "right_wing": {
+          "rotation": [0, 0, "-query.target_y_rotation * 0.35"]
+        }
+      }
+    },
+    "animation.nwa.f35.landing_gear": {
+      "loop": true,
+      "bones": {
+        "landing_gear": {
+          "rotation": ["query.ground_speed <= 0.08 ? 0 : 90", 0, 0],
+          "position": [0, "query.ground_speed <= 0.08 ? 0 : -2", 0]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "nwa:f35_fighter_jet",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": ["airforce", "vehicle", "redstone_disablable"]
+      },
+      "minecraft:health": {
+        "value": 120,
+        "max": 120
+      },
+      "minecraft:collision_box": {
+        "width": 3.2,
+        "height": 1.8
+      },
+      "minecraft:physics": {
+        "has_gravity": false,
+        "has_collision": true,
+        "push_towards_closest_space": false
+      },
+      "minecraft:rideable": {
+        "seat_count": 1,
+        "family_types": ["player"],
+        "pull_in_entities": false,
+        "seats": {
+          "position": [0.0, 1.2, 0.1]
+        }
+      },
+      "minecraft:movement": {
+        "value": 0.5
+      },
+      "minecraft:navigation.generic": {
+        "is_amphibious": false,
+        "can_path_over_water": true,
+        "can_open_doors": false,
+        "can_walk": false
+      },
+      "minecraft:projectile_shooter": {
+        "def": "nwa:lockon_missile",
+        "launch_power_scale": 1.0
+      }
+    }
+  }
+}
