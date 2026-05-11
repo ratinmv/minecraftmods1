@@ -1,0 +1,81 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "nwa:tactical_nuke",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "nwa:detonated": {
+        "minecraft:explode": {
+          "fuse_length": 0.0,
+          "power": 18,
+          "causes_fire": true,
+          "destroy_affected_by_griefing": true,
+          "breaks_blocks": true,
+          "knockback_scaling": 3.2
+        },
+        "minecraft:area_effect_cloud": {
+          "radius": 20.0,
+          "radius_on_use": 0.0,
+          "radius_per_tick": -0.002,
+          "duration": 2400,
+          "reapplication_delay": 40,
+          "particle": "nwa:fallout_haze",
+          "effects": [
+            {
+              "name": "wither",
+              "duration": 220,
+              "amplifier": 1
+            },
+            {
+              "name": "poison",
+              "duration": 220,
+              "amplifier": 1
+            }
+          ]
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": ["nuclear", "vehicle", "redstone_disablable"]
+      },
+      "minecraft:collision_box": {
+        "width": 1.2,
+        "height": 1.2
+      },
+      "minecraft:health": {
+        "value": 10,
+        "max": 10
+      },
+      "minecraft:physics": {
+        "has_gravity": true,
+        "has_collision": true,
+        "push_towards_closest_space": true
+      },
+      "minecraft:timer": {
+        "looping": false,
+        "time": [6.0, 8.0],
+        "time_down_event": {
+          "event": "nwa:detonate",
+          "target": "self"
+        }
+      }
+    },
+    "events": {
+      "nwa:detonate": {
+        "add": {
+          "component_groups": ["nwa:detonated"]
+        },
+        "run_command": {
+          "command": [
+            "function nwa/nuke_detonate"
+          ]
+        }
+      }
+    }
+  }
+}

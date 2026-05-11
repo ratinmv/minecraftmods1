@@ -1,0 +1,24 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.nwa.f35_fighter_jet",
+        "texture_width": 256,
+        "texture_height": 256,
+        "visible_bounds_width": 8,
+        "visible_bounds_height": 4,
+        "visible_bounds_offset": [0, 1.5, 0]
+      },
+      "bones": [
+        {"name": "root", "pivot": [0, 24, 0]},
+        {"name": "body", "parent": "root", "pivot": [0, 20, 0], "cubes": [{"origin": [-3, 18, -18], "size": [6, 4, 30], "uv": [0, 0]}]},
+        {"name": "nose", "parent": "body", "pivot": [0, 20, -18], "cubes": [{"origin": [-2, 18.5, -28], "size": [4, 3, 10], "uv": [0, 40]}]},
+        {"name": "left_wing", "parent": "body", "pivot": [3, 20, -2], "cubes": [{"origin": [3, 19, -10], "size": [14, 1, 16], "uv": [64, 0]}]},
+        {"name": "right_wing", "parent": "body", "pivot": [-3, 20, -2], "cubes": [{"origin": [-17, 19, -10], "size": [14, 1, 16], "uv": [64, 20]}]},
+        {"name": "tail", "parent": "body", "pivot": [0, 19, 10], "cubes": [{"origin": [-1, 13, 9], "size": [2, 6, 6], "uv": [0, 64]}]},
+        {"name": "landing_gear", "parent": "body", "pivot": [0, 22, 0], "cubes": [{"origin": [-2, 22, -6], "size": [1, 4, 1], "uv": [20, 64]}, {"origin": [1, 22, -6], "size": [1, 4, 1], "uv": [24, 64]}, {"origin": [-1, 22, 6], "size": [2, 4, 1], "uv": [28, 64]}]}
+      ]
+    }
+  ]
+}

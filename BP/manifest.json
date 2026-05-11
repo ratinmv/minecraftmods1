@@ -1,0 +1,23 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Nuclear Warfare & Airforce BP",
+    "description": "Server-side logic for tactical nuke and F-35 systems.",
+    "uuid": "4d9d198d-a498-4517-9dfc-1ccfcad218b0",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 20, 60]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "69c12c1f-6d67-441c-ab16-4d2495a8f8e5",
+      "version": [1, 0, 0]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "7fdbf6d5-e2eb-40eb-b83e-983f410ef70f",
+      "version": [1, 0, 0]
+    }
+  ]
+}

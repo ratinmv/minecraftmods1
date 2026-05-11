@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.nwa.f35.flight": {
+      "initial_state": "cruise",
+      "states": {
+        "cruise": {
+          "animations": ["bank_pitch"],
+          "transitions": [{"landing": "query.ground_speed <= 0.08"}]
+        },
+        "landing": {
+          "animations": ["bank_pitch", "landing_gear"],
+          "transitions": [{"cruise": "query.ground_speed > 0.08"}]
+        }
+      }
+    }
+  }
+}

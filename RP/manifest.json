@@ -1,0 +1,17 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Nuclear Warfare & Airforce RP",
+    "description": "Client assets for tactical nuke and F-35 systems.",
+    "uuid": "7fdbf6d5-e2eb-40eb-b83e-983f410ef70f",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 20, 60]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "f0f2ae2c-a6f3-4646-81e6-365b2f56543a",
+      "version": [1, 0, 0]
+    }
+  ]
+}
